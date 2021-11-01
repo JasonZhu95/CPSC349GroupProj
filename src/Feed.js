@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Feed.css";
+import StoryReelHeader from "./StoryReelHeader";
 import StoryReel from "./StoryReel";
 import MessageSender from "./MessageSender";
 import Post from "./Post";
@@ -15,6 +16,7 @@ function Feed() {
     }, []);
 
     return <div className="feed">
+        <StoryReelHeader />
         <StoryReel />
         <MessageSender />
         
