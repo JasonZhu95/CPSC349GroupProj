@@ -29,11 +29,11 @@ function Header() {
                 <input placeholder="Search" type="text" />
             </div>
         </div>
-        <div className="header__center">
+        <div className="header__center" >
         {/* Apply Imported Icons from Material UI library*/}
-            <div className="header__option header__option--active">
-                <HomeIcon fontSize="large"/>
-            </div>
+        <div className="header__option header__option--active">
+            <HomeIcon fontSize="large" onClick={HomeButtonHandler}/>
+        </div>
             <div className="header__option">
                 <FlagIcon fontSize="large" />
             </div>
@@ -74,10 +74,8 @@ function Header() {
 
 export default Header
 
-topFunction();
-
-function topFunction() {
-        console.log("Hello World!")
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function HomeButtonHandler() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
