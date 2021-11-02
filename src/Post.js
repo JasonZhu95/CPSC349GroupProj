@@ -1,10 +1,10 @@
 import { Avatar } from "@mui/material";
 import React from 'react';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import NearMeIcon from '@mui/icons-material/NearMe';
-import { ExpandMoreOutlined } from '@mui/icons-material';
+// import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+// import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import NearMeIcon from '@mui/icons-material/NearMe';
+// import { ExpandMoreOutlined } from '@mui/icons-material';
 import './Post.css';
 
 function Post({profilePic, image, username, timestamp, message }) {
@@ -27,7 +27,7 @@ function Post({profilePic, image, username, timestamp, message }) {
                 <img src={image} alt="" />
             </div>
 
-            <div className="post__options">
+            {/* <div className="post__options">
                 <div className="post__option">
                     <ThumbUpIcon />
                     <p>Like</p>
@@ -44,7 +44,7 @@ function Post({profilePic, image, username, timestamp, message }) {
                     <AccountCircleIcon />
                     <ExpandMoreOutlined />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
