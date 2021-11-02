@@ -1,0 +1,10 @@
+.storyReelHeader {
+    display: flex;
+}
+
+.storyReelHeader > h1 {
+    margin-top:  0px;
+    font-weight: 600px;
+    color: #2fc31d;
+    font-style: bold;
+}
