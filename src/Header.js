@@ -22,7 +22,7 @@ function Header() {
     return <div className='header'>
         <div className="header__left">
             <img
-                src="https://i.imgur.com/8jhYMZ0.png" alt=""
+                src="https://i.imgur.com/S4TF9YI.png" alt=""
             />
             <div className="header__input">
                 <SearchIcon />
