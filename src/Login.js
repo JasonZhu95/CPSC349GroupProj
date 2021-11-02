@@ -24,12 +24,13 @@ function Login() {
         <div className='login'>
             <div className="login__logo">
             <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
+                src="https://i.imgur.com/ajqjsxe.png"
                 alt=""
             />
-            <img
-                src="https://www.logo.wine/a/logo/Facebook/Facebook-Logo.wine.svg"
+            <img 
+                src="https://i.imgur.com/JFaAnRO.png"
                 alt=""
+                style={{ width: 150 }}
             />
             </div>
             <Button type="submit" onClick={signIn}

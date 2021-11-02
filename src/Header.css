@@ -46,16 +46,16 @@
 }
 
 .header__option:hover > .MuiSvgIcon-root {
-    color: #2e81f4;
+    color: #2fc31d;
 }
 
 /* Select our active icon and change color */
 .header__option--active > .MuiSvgIcon-root {
-    color: #2e81f4;
+    color: #2fc31d;
 }
 
 .header__option--active {
-    border-bottom: 4px solid #2e81f4;
+    border-bottom: 4px solid #2fc31d;
 }
 
 .header__option {
