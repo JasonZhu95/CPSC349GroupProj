@@ -1,15 +1,15 @@
 import { Avatar } from "@mui/material";
 import React from 'react';
-import "./Story.css";
+import "./Dev.css";
 
-function Story({ image, profileSrc, title }) {
+function Dev({ image, profileSrc, title }) {
     return (
         <div style={{backgroundImage: `url(${image})`}}
-        className = "story">
-            <Avatar className="story__avatar" src={profileSrc} />
+        className = "dev">
+            <Avatar className="dev__avatar" src={profileSrc} />
             <h4>{title}</h4>
         </div>
     );
 }
 
-export default Story
+export default Dev
