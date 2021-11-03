@@ -57,16 +57,16 @@ function Header() {
 
             {/* Material UI that allows for clickable icons */}
             <IconButton>
-                <AddIcon />
+                <AddIcon style={{fill: "#e4e6eb"}}/>
             </IconButton>
             <IconButton>
-                <ForumIcon />
+                <ForumIcon style={{fill: "#e4e6eb"}}/>
             </IconButton>
             <IconButton>
-                <NotificationsActiveIcon />
+                <NotificationsActiveIcon style={{fill: "#e4e6eb"}}/>
             </IconButton>
             <IconButton>
-                <ExpandMoreIcon />
+                <ExpandMoreIcon style={{fill: "#e4e6eb"}}/>
             </IconButton>
         </div>
 
