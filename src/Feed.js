@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Feed.css";
-import StoryReelHeader from "./StoryReelHeader";
-import StoryReel from "./StoryReel";
+import DevReelHeader from "./DevReelHeader";
+import DevReel from "./DevReel";
 import MessageSender from "./MessageSender";
 import Post from "./Post";
 import db from "./firebase";
@@ -16,8 +16,8 @@ function Feed() {
     }, []);
 
     return <div className="feed">
-        <StoryReelHeader />
-        <StoryReel />
+        <DevReelHeader />
+        <DevReel />
         <MessageSender />
         
         {posts.map(post => (
