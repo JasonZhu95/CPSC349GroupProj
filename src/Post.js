@@ -1,13 +1,33 @@
 import { Avatar } from "@mui/material";
-import React from 'react';
-// import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import React, { useState } from 'react';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 // import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // import NearMeIcon from '@mui/icons-material/NearMe';
 // import { ExpandMoreOutlined } from '@mui/icons-material';
 import './Post.css';
+import db from "./firebase";
 
-function Post({profilePic, image, username, timestamp, message }) {
+function Post({profilePic, image, username, timestamp, message, likes, id }) {
+    const[like, setLike] = useState(false);
+    const[identity, setId] = useState("");
+    const[likeOnce, setLikeOnce] = useState(false);
+
+    function handleClick(e) {
+        setLike(true);
+        setId(id);
+    }
+
+    const greenColor={
+        color:"#2fc31d"
+    }
+
+    if (like && id===identity && !likeOnce) {
+        db.collection("posts").doc(id).update({likes:likes+1}).catch(err=>{console.log(err);});
+        setLikeOnce(true);
+    }
+
+
     return (
         <div className='post'>
             <div className="post__top">
@@ -27,24 +47,12 @@ function Post({profilePic, image, username, timestamp, message }) {
                 <img src={image} alt="" />
             </div>
 
-            {/* <div className="post__options">
-                <div className="post__option">
-                    <ThumbUpIcon />
-                    <p>Like</p>
+            <div className="post__options">
+                <div className="post__option" name={identity}>
+                    <ThumbUpIcon onClick={handleClick} style={like ? greenColor : null} />
+                    <p onClick={handleClick}>Like {likes}</p>
                 </div>
-                <div className="post__option">
-                    <ChatBubbleOutlineIcon />
-                    <p>Comment</p>
-                </div>
-                <div className="post__option">
-                    <NearMeIcon />
-                    <p>Share</p>
-                </div>
-                <div className="post__option">
-                    <AccountCircleIcon />
-                    <ExpandMoreOutlined />
-                </div>
-            </div> */}
+            </div>
         </div>
     );
 }

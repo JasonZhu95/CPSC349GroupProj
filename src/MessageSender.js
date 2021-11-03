@@ -22,11 +22,13 @@ function MessageSender() {
         e.preventDefault();
 
         db.collection('posts').add({
+            userId:user.uid,
             message: input,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             profilePic: user.photoURL,
             username: user.displayName,
             image: imageUrl,
+            likes: 0
         });
 
         //Reset Form to empty
