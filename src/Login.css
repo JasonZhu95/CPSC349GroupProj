@@ -7,12 +7,12 @@
 .login > button {
     width: 300px;
     background-color: #2fc31d;
-    color: #eff2f5;
+    color: #e4e6eb;
     font-weight: 800;
 }
 
 .login > button:hover {
-    background-color: white;
+    background-color: #e4e6eb;
     color: #2fc31d;
 }
 

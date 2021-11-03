@@ -14,6 +14,7 @@ function Widgets() {
                 frameborder="0"
                 allowTransparency="true"
                 allow="encrypted-media"
+                color="#242526"
       ></iframe>
         </div>
     )
