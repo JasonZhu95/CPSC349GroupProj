@@ -2,9 +2,6 @@ import { Avatar } from "@mui/material";
 import React, { useState } from 'react';
 import styled from "@emotion/styled"
 import "./MessageSender.css";
-// import VideocamIcon from '@mui/icons-material/Videocam';
-// import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
-// import InsertEmotionIcon from '@mui/icons-material/InsertEmoticon';
 import { useStateValue } from "./StateProvider";
 import db from "./firebase";
 import firebase from "firebase";
@@ -70,21 +67,10 @@ function MessageSender() {
             </div>
             <div className="messageSender__bottom">
                 <div className="messageSender__option">
-                    {/* <VideocamIcon style={{ color: "red" }}/> */}
                     <Button onClick={handleSubmit} type="submit">
                         <h3>Shout Into The Void</h3>
                     </Button>
                 </div>
-
-                {/* <div className="messageSender__option">
-                    <PhotoLibraryIcon style={{ color: "green" }}/>
-                    <h3>Photo/Video</h3>
-                </div>
-
-                <div className="messageSender__option">
-                    <InsertEmotionIcon style={{ color: "orange" }}/>
-                    <h3>Feeling/Activity</h3>
-                </div> */}
             </div>
         </div>
     );
