@@ -6,6 +6,7 @@ import "./Header.css";
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import FlagIcon from '@mui/icons-material/Flag';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
@@ -15,6 +16,7 @@ import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useStateValue } from "./StateProvider";
+import firebase from "firebase";
 
 function Header() {
     const [{ user }, dispatch] = useStateValue();
@@ -35,13 +37,13 @@ function Header() {
             <HomeIcon fontSize="large" onClick={HomeButtonHandler}/>
         </div>
             <div className="header__option">
-                <FlagIcon fontSize="large" />
+                <FlagIcon fontSize="large"/>
             </div>
             <div className="header__option">
                 <SubscriptionsOutlinedIcon fontSize="large" />
             </div>
             <div className="header__option">
-                <StorefrontOutlinedIcon fontSize="large" />
+                <CalendarTodayIcon fontSize="large" onClick={CalanderTime}/>
             </div>
             <div className="header__option">
                 <SupervisedUserCircleIcon fontSize="large" />
@@ -75,7 +77,21 @@ function Header() {
 export default Header
 
 function HomeButtonHandler() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; //Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
 }
 
+function CalanderTime(){
+    const monthNames = [1,2,3,4,5,6,7,8,9,10,11,12];
+    const dateObj = new Date();
+    const month = monthNames[dateObj.getMonth()];
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const year = dateObj.getFullYear();
+    const output = month  + '/'+ day  + '/' + year;
+  //  document.querySelector('.date').textContent = output; 
+    var time = new Date();
+    alert("The current time is: " + Math.trunc(time/1000) + " seconds\nOR: " + 
+    Math.trunc(time/86400000) + " days\nOR: " + Math.trunc(time/31557600000) + " years\n" +
+    "This translates into todays date: " + output + "\nOr in more detail: \n" + time)
+}
+    
