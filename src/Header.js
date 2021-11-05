@@ -5,6 +5,7 @@ import "./Header.css";
 //Import Icons from Material UI
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import FlagIcon from '@mui/icons-material/Flag';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
@@ -33,20 +34,20 @@ function Header() {
         </div>
         <div className="header__center" >
         {/* Apply Imported Icons from Material UI library*/}
-        <div className="header__option header__option--active">
-            <HomeIcon fontSize="large" onClick={HomeButtonHandler}/>
+        <div className="header__option header__option--active"  onClick={HomeButtonHandler}>
+            <HomeIcon fontSize="large"/>
         </div>
             <div className="header__option">
                 <FlagIcon fontSize="large"/>
             </div>
-            <div className="header__option">
-                <SubscriptionsOutlinedIcon fontSize="large" />
+            <div className="header__option" onClick={BottomScreenHandler}>
+                <ArrowDownwardIcon fontSize="large"/>
             </div>
-            <div className="header__option">
-                <CalendarTodayIcon fontSize="large" onClick={CalanderTime}/>
+            <div className="header__option" onClick={CalanderTime}>
+                <CalendarTodayIcon fontSize="large"/>
             </div>
-            <div className="header__option">
-                <SupervisedUserCircleIcon fontSize="large" />
+            <div className="header__option"  onClick={() => GetUser(user)}>
+                <SupervisedUserCircleIcon fontSize="large"/>
             </div>
         </div>
 
@@ -81,6 +82,10 @@ function HomeButtonHandler() {
     document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
 }
 
+function BottomScreenHandler(){
+    window.scrollTo(0,document.body.scrollHeight);
+}
+
 function CalanderTime(){
     const monthNames = [1,2,3,4,5,6,7,8,9,10,11,12];
     const dateObj = new Date();
@@ -93,5 +98,12 @@ function CalanderTime(){
     alert("The current time is: " + Math.trunc(time/1000) + " seconds\nOR: " + 
     Math.trunc(time/86400000) + " days\nOR: " + Math.trunc(time/31557600000) + " years\n" +
     "This translates into todays date: " + output + "\nOr in more detail: \n" + time)
+    console.log("testing CalanderTime")
+}
+
+function GetUser(user){
+    //UNUSED AT THE MOMENT
+    console.log("testing GetUser")
+    console.log(user.displayName)
 }
     
