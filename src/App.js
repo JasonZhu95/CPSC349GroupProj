@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
+import './scrollbar.css';
 
 //This is a change to show github
 function App() {
