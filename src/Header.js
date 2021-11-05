@@ -1,6 +1,6 @@
 //Navbar Header for the Website
 //Import react
-import React from 'react'
+import React, {useState} from 'react'
 import "./Header.css";
 //Import Icons from Material UI
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,8 +8,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import FlagIcon from '@mui/icons-material/Flag';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
-import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import { Avatar, IconButton } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
@@ -17,12 +15,25 @@ import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useStateValue } from "./StateProvider";
-import firebase from "firebase";
+import Popup from './Popup.js'
+import './Popup.css'
 
 function Header() {
     const [{ user }, dispatch] = useStateValue();
+    const [isOpen, setIsOpen] = useState(false);
+    const PopupToggle = () => {
+        setIsOpen(!isOpen);
+    }
+    
 
     return <div className='header'>
+    <div>
+    {isOpen && <Popup information = {<>
+    <b className="welcome-user-popup">Welcome to our site!</b>
+    </>}
+    CloseHandler={PopupToggle}
+    />}
+    </div>
         <div className="header__left">
             <img
                 src="https://i.imgur.com/S4TF9YI.png" alt=""
@@ -46,10 +57,13 @@ function Header() {
             <div className="header__option" onClick={CalanderTime}>
                 <CalendarTodayIcon fontSize="large"/>
             </div>
-            <div className="header__option"  onClick={() => GetUser(user)}>
+            <div className="header__option"  onClick={PopupToggle}>
                 <SupervisedUserCircleIcon fontSize="large"/>
             </div>
         </div>
+
+
+
 
         <div className="header__right">
             <div className="header__info">
@@ -102,8 +116,7 @@ function CalanderTime(){
 }
 
 function GetUser(user){
-    //UNUSED AT THE MOMENT
-    console.log("testing GetUser")
-    console.log(user.displayName)
+    return user.displayName;
+    console.log("Get User called");
 }
     
