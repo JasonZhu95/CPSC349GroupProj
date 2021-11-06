@@ -11,7 +11,7 @@ function DevReel() {
       />
       <Dev
         image="https://i.imgur.com/rEq5YmM.jpg"
-        profileSrc="https://i.imgur.com/wtEWSg7.jpg?1"
+        profileSrc="https://i.imgur.com/wdEr7ea.png"
         title="Jacob Coyle"
       />
       <Dev
