@@ -12,7 +12,7 @@ function Widgets() {
             <div className="widgets">
                 <iframe
                     title="widget__side"
-                    src="http://www.fullerton.edu/ecs/cs/"
+                    src="https://www.fullerton.edu/ecs/cs/"
                     width="340"
                     height="65%"
                     style={{ border: 'none', overflow: 'hidden' }}
