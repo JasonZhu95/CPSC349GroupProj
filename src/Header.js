@@ -14,6 +14,7 @@ import AddIcon from '@mui/icons-material/Add';
 import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import { useStateValue } from "./StateProvider";
 import Popup from './Popup.js'
 import './Popup.css'
@@ -58,7 +59,8 @@ function Header() {
                 <CalendarTodayIcon fontSize="large"/>
             </div>
             <div className="header__option"  onClick={PopupToggle}>
-                <SupervisedUserCircleIcon fontSize="large"/>
+                <EmojiPeopleIcon fontSize="large"/>
+                
             </div>
         </div>
 
