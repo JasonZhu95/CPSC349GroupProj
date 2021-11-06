@@ -29,7 +29,7 @@ function Header() {
     return <div className='header'>
     <div>
     {isOpen && <Popup information = {<>
-    <b className="welcome-user-popup">Welcome to our site!</b>
+    <b className="welcome-user-popup">Welcome to our site, {user.displayName}!</b>
     </>}
     CloseHandler={PopupToggle}
     />}
