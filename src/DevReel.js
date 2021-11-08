@@ -20,7 +20,7 @@ function DevReel() {
         title="Ricardo Barojas"
       />
       <Dev
-        image="https://i.imgur.com/6iSrX9q.png"
+        image="https://i.imgur.com/nMrQGDI.png"
         profileSrc="https://i.imgur.com/nMrQGDI.png"
         title="Minkyu Park"
       />
