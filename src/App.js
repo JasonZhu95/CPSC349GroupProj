@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import Feed from "./Feed";
 import Header from "./Header";
-// import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
@@ -20,7 +20,7 @@ function App() {
         <Header />
 
         <div className="app__body">
-          {/* <Sidebar /> */}
+          <Sidebar />
           <Feed />
           <Widgets />
         </div>
