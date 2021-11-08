@@ -44,21 +44,21 @@ function MessageSender() {
     `;
 
     return (
+        <><h1 class="messageSender__vent">Vent Out!</h1>
+        <a class="messageSender__vent">Be cautious on what you choose to say!</a>
         <div className="messageSender">
             <div className="messageSender__top">
-                <Avatar src={user.photoURL}/>
+                <Avatar src={user.photoURL} />
                 <form>
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         className="messageSender__input"
-                        placeholder= {`What's on your mind, ${user.displayName}?`}
-                    />
-                    <input 
+                        placeholder={`What's on your mind, ${user.displayName}?`} />
+                    <input
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)}
-                        placeholder="image URL (Optional)" 
-                    />
+                        placeholder="image URL (Optional)" />
 
                     <button onClick={handleSubmit} type="submit">
                         Hidden submit
@@ -72,7 +72,7 @@ function MessageSender() {
                     </Button>
                 </div>
             </div>
-        </div>
+        </div></>
     );
 }
 
