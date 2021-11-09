@@ -1,6 +1,6 @@
 import React from 'react';
 import "./DevReel.css";
-import Dev from "./Dev";
+import Dev from "./Dev.js";
 
 function DevReel() {
     return <div className='devReel'>
