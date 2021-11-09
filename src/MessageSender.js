@@ -45,7 +45,7 @@ function MessageSender() {
 
     return (
         <><h1 class="messageSender__vent">Vent Out!</h1>
-        <a class="messageSender__vent">Be cautious on what you choose to say!</a>
+        <p class="messageSender__vent">Be cautious on what you choose to say!</p>
         <div className="messageSender">
             <div className="messageSender__top">
                 <Avatar src={user.photoURL} />
