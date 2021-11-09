@@ -1,5 +1,5 @@
 /* Header Style Sheet */
-.header {
+.header-dark {
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -8,6 +8,17 @@
     z-index: 100;
     top: 0;
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.header-random {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #195694;
+    z-index: 100;
+    top: 0;
+    box-shadow: 0px 5px 8px -9px rgba(255, 255, 255, 0.75);
 }
 
 .header__left {

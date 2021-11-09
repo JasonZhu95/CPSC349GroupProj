@@ -27,3 +27,22 @@
     left: 20px;
     color: white;
 }
+
+.dev .tool-tip-intro {
+    visibility: hidden;
+    width: 133px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: 63px;
+    margin-top: 8px;
+
+}
+
+.dev:hover .tool-tip-intro {
+    visibility: visible;
+}

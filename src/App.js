@@ -12,7 +12,7 @@ import './scrollbar.css';
 function App() {
   const [{ user }, dispatch] = useStateValue();
   return (
-    <div className="app">
+    <div className="app-dark">
       {!user ? (
         <Login />
         ) : (
