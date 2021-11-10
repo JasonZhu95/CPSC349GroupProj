@@ -54,11 +54,11 @@ function MessageSender() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         className="messageSender__input"
-                        placeholder={`What's on your mind, ${user.displayName}?`} />
+                        placeholder={`What are you thinking about, ${user.displayName}?`} />
                     <input
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)}
-                        placeholder="image URL (Optional)" />
+                        placeholder="Image URL (Optional)" />
 
                     <button onClick={handleSubmit} type="submit">
                         Hidden submit
